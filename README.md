@@ -1,4 +1,4 @@
-# Submission for Cross-Domain Few-Shot Learning (CD-FSL) Benchmark
+# Submission for CVPR 2020 Challenge
 
 
 ### Website
