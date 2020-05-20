@@ -7,7 +7,7 @@
 
 ## Introduction
 
-The Cross-Domain Few-Shot Learning (CD-FSL) challenge benchmark includes data from the CropDiseases [1], EuroSAT [2], ISIC2018 [3-4], and ChestX [5] datasets, which covers plant disease images, satellite images, dermoscopic images of skin lesions, and X-ray images, respectively. The selected datasets reflect real-world use cases for few-shot learning since collecting enough examples from above domains is often difficult, expensive, or in some cases not possible. In addition, they demonstrate the following spectrum of readily quantifiable domain shifts from ImageNet: 1) CropDiseases images are most similar as they include perspective color images of natural elements, but are more specialized than anything available in ImageNet, 2) EuroSAT images are less similar as they have lost perspective distortion, but are still color images of natural scenes, 3) ISIC2018 images are even less similar as they have lost perspective distortion and no longer represent natural scenes, and 4) ChestX images are the most dissimilar as they have lost perspective distortion, all color, and do not represent natural scenes.
+In this paper, we tackle the new Cross-Domain Few-Shot Learning benchmark proposed by the CVPR 2020 Challenge [1]. To this end, we build upon state-of-the-art methods in domain adaptation and few-shot learning to create a system that can be trained to perform both tasks end-to-end. Inspired by the need, we explore the integration of transfer-learning (fine-tuning) with meta-learning algorithms, to train a network that has specific layers that are designed to be adapted at a later fine-tuning stage. To do so, we modify the episodic training process to include a first-order MAML-based meta-learning algorithm, and use a Graph Neural Network model as the subsequent meta-learning module. We find that my proposed method helps to boost accuracy significantly, especially when coupled with data augmentation. In my final results, we combine the novel method with the baseline method in a simple ensemble, and achieve an average accuracy of 73.56\% on the benchmark. This is a 6.21\% improvement over existing SOTA methods that were trained solely on miniImagenet.
 
 ## Datasets
 The following datasets are used for evaluation in this challenge:
@@ -164,4 +164,5 @@ The following datasets are used for evaluation in this challenge:
 
     Follow steps 2 and 3 in the steps for testing using pretrained models.
 
+[1] Yunhui  Guo,  Noel  CF  Codella,  Leonid  Karlinsky,  John  RSmith,  Tajana  Rosing,  and  Rogerio  Feris.A  new  bench-mark for evaluation of cross-domain few-shot learning.arXivpreprint arXiv:1912.07200, 2019
 
