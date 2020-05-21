@@ -61,7 +61,7 @@ The following datasets are used for evaluation in this challenge:
 
 2. Download miniImageNet using <https://www.dropbox.com/s/sbttsmb1cca0y0k/miniImagenet3.zip?dl=1>
 
-  These are the downsampled images of the original dataset that were used in this study. Trains faster and seems to deliver better results.
+    These are the downsampled images of the original dataset that were used in this study. Trains faster and seems to   deliver better results.
 
 3. Change configuration file `./configs.py` to reflect the correct paths to each dataset. Please see the existing example paths for information on which subfolders these paths should point to.
 
