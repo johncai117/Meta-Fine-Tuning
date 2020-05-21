@@ -78,7 +78,7 @@ The following datasets are used for evaluation in this challenge:
 
 ## Steps for Testing using Pre-trained models
 
-1. Download the pre-trained models from <https://www.dropbox.com/s/drzg0ptexfjrv7f/logs.zip?dl=1>
+1. Download the pre-trained models from a link that I will send you. If this is for the challenge evaluation, the link has already been included with the submission.
  
     Unzip the file and place it in the main directory of the project
  
