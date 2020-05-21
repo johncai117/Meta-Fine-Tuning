@@ -1,7 +1,8 @@
-# Submission for Cross-Domain Few-Shot Learning CVPR 2020 Challenge
+# Cross-Domain Few-Shot Learning with Meta Fine-Tuning
 
 
 ### Challenge Website
+Cross-Domain Few-Shot Learning CVPR 2020 Challenge
 #### https://www.learning-with-limited-labels.com/
 
 
