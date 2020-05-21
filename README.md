@@ -109,7 +109,7 @@ The following datasets are used for evaluation in this challenge:
  Replace the test_dataset argument with {CropDisease, EuroSat, ISIC, ChestX}.
  
  
-## Steps for Re-training and testing
+## Steps for Re-training and Testing
 
 
 1. Train modified baseline model on miniImageNet for 400 epochs
