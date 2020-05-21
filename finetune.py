@@ -299,7 +299,7 @@ def finetune(liz_x,y, model, state_in, save_it, linear = False, flatten = True, 
     pretrained_model.eval()
     classifier.eval()
     if not linear:
-      model.eval() ## evaluation mode ## comment for transduction learning
+      #model.eval() ## evaluation mode ## comment for transduction learning
       if flatten == True:
         output_all = pretrained_model(x_inn.cuda()).view(n_way, n_support + n_query, -1).detach()
         output_query = pretrained_model(x_b_i.cuda()).view(n_way,n_query,-1)
