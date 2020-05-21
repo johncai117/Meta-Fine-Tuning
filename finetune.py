@@ -296,7 +296,7 @@ def finetune(liz_x,y, model, state_in, save_it, linear = False, flatten = True, 
             if freeze_backbone is False:
                 delta_opt.step()
 
-    pretrained_model.eval()
+    #pretrained_model.eval() ## for transduction
     classifier.eval()
     if not linear:
       #model.eval() ## evaluation mode ## comment for transduction learning
