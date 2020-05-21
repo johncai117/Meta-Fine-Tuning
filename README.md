@@ -151,7 +151,7 @@ The following datasets are used for evaluation in this challenge:
     ```bash
         python ./train_50.py --dataset miniImageNet --model ResNet10  --method gnnnet --n_shot 50 --train_aug --start_epoch 0 --stop_epoch 401
     ```
-5. Meta Fine Tuning of GNN model on MiniImagenet for 50 shots for 400 epochs
+5. Meta Fine Tuning of GNN model on MiniImagenet for 50 shots for another 200 epochs
  
     • *GNN on miniImageNet for 50 shot*
 
