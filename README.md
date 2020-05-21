@@ -156,7 +156,7 @@ The following datasets are used for evaluation in this challenge:
     • *GNN on miniImageNet for 50 shot*
 
       ```bash
-          python ./train.py --dataset miniImageNet --model ResNet10  --method gnnnet --n_shot 50 --train_aug --start_epoch 401 --stop_epoch 601 --fine_tune
+          python ./train_50.py --dataset miniImageNet --model ResNet10  --method gnnnet --n_shot 50 --train_aug --start_epoch 401 --stop_epoch 601 --fine_tune
       ```
     
 6. Test
