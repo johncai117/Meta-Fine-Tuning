@@ -51,9 +51,6 @@ The following datasets are used for evaluation in this challenge:
 
 * **Average accuracy across all trials: 73.78\% 
 * This is a 6.51\% improvement over the baseline model in the challenge. 
-* In 5-shot: 8.48\% improvement. 
-* In 20-shot: 4.68\% improvement. 
-* In 50-shot: 6.38\% improvement. 
 
 
 ## Steps for Loading Data
