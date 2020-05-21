@@ -1,4 +1,4 @@
-# Submission for CVPR 2020 Challenge
+# Submission for Cross-Domain Few-Shot Learning CVPR 2020 Challenge
 
 
 ### Challenge Website
