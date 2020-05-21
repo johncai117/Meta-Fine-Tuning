@@ -1,7 +1,7 @@
 # Submission for CVPR 2020 Challenge
 
 
-### Website
+### Challenge Website
 #### https://www.learning-with-limited-labels.com/
 
 
