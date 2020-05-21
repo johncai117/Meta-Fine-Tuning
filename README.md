@@ -97,6 +97,7 @@ The following datasets are used for evaluation in this challenge:
   • *Example output:* 600 Test Acc = 98.78% +- 0.19%
  
  3. Run the various experiments in this paper for 50-shot
+ 
     • *50-shot*
     ```bash
      python finetune_50.py --model ResNet10 --method all  --train_aug --n_shot 50 --save_iter 600 --fine_tune_epoch 5 --test_dataset CropDisease --gen_examples 17 
