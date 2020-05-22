@@ -22,7 +22,6 @@ from methods.baselinetrain import BaselineTrain
 from methods.protonet import ProtoNet
 from methods.dampnet import DampNet
 from methods import dampnet_full
-from methods import dampnet_full_class
 from io_utils import model_dict, parse_args, get_resume_file, get_assigned_file
 from datasets import miniImageNet_few_shot
 
