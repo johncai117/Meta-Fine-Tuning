@@ -18,13 +18,10 @@ from methods.baselinetrain import BaselineTrain
 from methods.baselinefinetune import BaselineFinetune
 from methods.protonet import ProtoNet
 from methods.gnnnet import GnnNet
-from methods import gnnnet_neg_margin
-from methods import gnnnet_normalized
+
 from methods import dampnet
 from methods import dampnet_full
-from methods import dampnet_full_class
-from methods import dampnet_full_sparse
-from methods.relationnet import RelationNet
+
 
 from io_utils import model_dict, parse_args, get_resume_file, get_best_file, get_assigned_file 
 
@@ -518,7 +515,7 @@ if __name__=='__main__':
             if not params.method in ['baseline'] : 
               modelfile2   = get_assigned_file(checkpoint_dir2,600)
               
-              modelfile2_o   = get_assigned_file(checkpoint_dir2,400)
+              modelfile2_o   = get_assigned_file(checkpoint_dir2,600)
                 
                 
                 
@@ -539,13 +536,10 @@ if __name__=='__main__':
                 
                 
                 
-                model_2_o = copy.deepcopy(model_2)
                 
-                model_2_o.load_state_dict(state2_o)
                 del tmp2
-                del tmp2_o
                 del modelfile2
-                del modelfile2_o
+
               
                 
   
