@@ -9,9 +9,14 @@ Cross-Domain Few-Shot Learning CVPR 2020 Challenge
 
 Submission for the CVPR 2020 Challenge. 
 
+### Abstract
+
+ In this paper, we tackle the new Cross-Domain Few-Shot Learning benchmark proposed by the CVPR 2020 Challenge. To this end, we build upon state-of-the-art methods in domain adaptation and few-shot learning to create a system that can be trained to perform both tasks. Inspired by the need to create models designed to be fine-tuned, we explore the integration of transfer-learning (fine-tuning) with meta-learning algorithms, to train a network that has specific layers that are designed to be adapted at a later fine-tuning stage. To do so, we modify the episodic training process to include a first-order MAML-based meta-learning algorithm, and use a Graph Neural Network model as the subsequent meta-learning module to compare the feature vectors. We find that our proposed method helps to boost accuracy significantly, especially when coupled with data augmentation. In our final results, we combine the novel method with the baseline method in a simple ensemble, and achieve an average accuracy of 73.78\% on the benchmark. This is a 6.51\% improvement over existing SOTA baseline methods that were trained solely on miniImagenet.
+
 ### Link to arxiv Paper
 
 #### https://arxiv.org/abs/2005.10544
+
 
 ## Datasets
 The following datasets are used for evaluation in this challenge:
