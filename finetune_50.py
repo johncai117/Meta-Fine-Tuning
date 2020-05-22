@@ -580,12 +580,6 @@ if __name__=='__main__':
                 #del tmp2_o
                 del modelfile2
                 #del modelfile2_o
-              if True == False:
-                tmp3 = torch.load(modelfile3)
-                state3 = tmp3['state']
-                model_3.load_state_dict(tmp3['state'])
-                del tmp3
-                del modelfile3
   
               
   ds = False
