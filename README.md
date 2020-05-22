@@ -69,7 +69,7 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
 
 3. Change configuration file `./configs.py` to reflect the correct paths to each dataset. Please see the existing example paths for information on which subfolders these paths should point to.
 
-4. If there is an error in data loading in the next few steps below, it is most likely because of the num_workers argument - multi-threading large files may not work, especially at larger shots.
+4. *IMPORTANT* If there is an error in data loading in the next few steps below, it is most likely because of the num_workers argument - multi-threading large files may not work, especially at larger shots. 
  
    If error is encountered, do the following:
    Configure the num_workers=0 in the data_loader_params in the functions of SetDataset2.get_data_loader in:
