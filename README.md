@@ -49,7 +49,7 @@ The following datasets are used for evaluation in this challenge:
     Direct: command line `kaggle datasets download -d nih-chest-xrays/data`
 
 ### Codebase
-The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchmark [1], while the GNN function was modified from https://github.com/hytseng0509/CrossDomainFewShot. [2]
+The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl-benchmark [1], while the GNN function was modified from https://github.com/hytseng0509/CrossDomainFewShot. [2]
 
 ## Results
 
