@@ -551,7 +551,7 @@ if __name__=='__main__':
               checkpoint_dir3 += '_%dway_%dshot' %( params.train_n_way, params.n_shot)
             if not params.method in ['baseline'] : 
               modelfile2   = get_assigned_file(checkpoint_dir2,600)
-              modelfile2_o   = get_assigned_file(checkpoint_dir2,400)
+              modelfile2_o   = get_assigned_file(checkpoint_dir2,600)
                 
               modelfile3   = get_assigned_file(checkpoint_dir3,600)
                 
@@ -560,9 +560,9 @@ if __name__=='__main__':
 
               if modelfile2 is not None:
                 tmp2 = torch.load(modelfile2)
-                tmp2_o  = torch.load(modelfile2_o)
+                #tmp2_o  = torch.load(modelfile2_o)
                 state2 = tmp2['state']
-                state2_o = tmp2_o['state']
+                #state2_o = tmp2_o['state']
                 state_keys = list(state2.keys())
                 for _, key in enumerate(state_keys):
                     if "feature2." in key:
