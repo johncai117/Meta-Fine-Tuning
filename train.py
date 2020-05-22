@@ -8,12 +8,8 @@ import time
 import os
 import glob
 from methods.gnnnet import GnnNet
-from methods import gnnnet_normalized
-from methods import gnnnet_neg_margin
 from methods import gnnnet
 from methods import gnn
-from methods import protonet_damp
-from methods.maml import MAML
 
 import configs
 import backbone
@@ -21,10 +17,7 @@ from data.datamgr import SimpleDataManager, SetDataManager
 from methods.baselinetrain import BaselineTrain
 from methods.protonet import ProtoNet
 from methods.dampnet import DampNet
-from methods.relationnet import RelationNet
 from methods import dampnet_full
-from methods import dampnet_full_sparse
-from methods import dampnet_full_class
 from io_utils import model_dict, parse_args, get_resume_file, get_assigned_file
 from datasets import miniImageNet_few_shot, DTD_few_shot
 
