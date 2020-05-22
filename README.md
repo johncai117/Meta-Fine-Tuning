@@ -86,7 +86,7 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
  
     Unzip the file and place it in the main directory of the project
  
-5. Run the various experiments in this paper for 5-shot, 20-shot and 50-shot
+5. Run the main experiments in this paper for 5-shot, 20-shot and 50-shot
 
     • *5-shot*
 
@@ -102,7 +102,7 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
  
   • *Example output:* 600 Test Acc = 98.78% +- 0.19%
  
- 3. Run the various experiments in this paper for 50-shot
+ 3. Run the main experiments in this paper for 50-shot
  
     • *50-shot*
     ```bash
