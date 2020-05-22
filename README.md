@@ -121,7 +121,7 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
 
     • *Standard supervised learning on miniImageNet*
     ```bash
-        python ./train.py --dataset miniImageNet --model ResNet10  --method baseline --train_aug --start_epoch 0 --end_epoch 401
+        python ./train.py --dataset miniImageNet --model ResNet10  --method baseline --train_aug --start_epoch 0 --stop_epoch 401
     ```
 2. Train GNN model on MiniImagenet for 5 and 20 shots for 400 epochs
 
