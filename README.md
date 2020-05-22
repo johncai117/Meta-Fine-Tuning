@@ -78,6 +78,8 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
     EuroSAT_few_shot.py,
     ISIC_few_shot.py,
     Chest_few_shot.py
+   
+   Another edit you can do is to if you run out of RAM is to change the data_loading process to read images on the fly (this would reduce the memory load but take longer to run). 
 
 
 ## Steps for Testing using Pre-trained models
