@@ -10,7 +10,6 @@ Cross-Domain Few-Shot Learning CVPR 2020 Challenge
 Submission for the CVPR 2020 Challenge. 
 
 ### Link to arxiv Paper
-Cross-Domain Few-Shot Learning CVPR 2020 Challenge
 
 #### https://arxiv.org/abs/2005.10544
 
