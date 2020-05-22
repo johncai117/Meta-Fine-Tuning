@@ -23,7 +23,7 @@ The following datasets are used for evaluation in this challenge:
 
 ### Source domain: 
 
-* miniImageNet. * 
+* miniImageNet.
 
 
 
