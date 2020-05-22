@@ -5,16 +5,17 @@
 Cross-Domain Few-Shot Learning CVPR 2020 Challenge
 #### https://www.learning-with-limited-labels.com/
 
-
 ## Introduction
 
 Submission for the CVPR 2020 Challenge. 
 
+### Link to arxiv Paper
+Cross-Domain Few-Shot Learning CVPR 2020 Challenge
+
+#### https://arxiv.org/abs/2005.10544
+
 ## Datasets
 The following datasets are used for evaluation in this challenge:
-
-### Codebase
-The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchmark [1], while the GNN function was modified from https://github.com/hytseng0509/CrossDomainFewShot. [2]
 
 ### Source domain: 
 
@@ -47,6 +48,9 @@ The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchma
     Home: https://www.kaggle.com/nih-chest-xrays/data
 
     Direct: command line `kaggle datasets download -d nih-chest-xrays/data`
+
+### Codebase
+The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchmark [1], while the GNN function was modified from https://github.com/hytseng0509/CrossDomainFewShot. [2]
 
 ## Results
 
