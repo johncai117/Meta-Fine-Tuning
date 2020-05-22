@@ -74,9 +74,9 @@ The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchma
    If error is encountered, do the following:
    Configure the num_workers=0 in the data_loader_params in the functions of SetDataset2.get_data_loader in:
   
-    CropDisease_few_shot.py
-    EuroSAT_few_shot.py
-    ISIC_few_shot.py
+    CropDisease_few_shot.py,
+    EuroSAT_few_shot.py,
+    ISIC_few_shot.py,
     Chest_few_shot.py
 
 
