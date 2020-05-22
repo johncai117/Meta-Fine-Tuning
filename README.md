@@ -13,8 +13,8 @@ Submission for the CVPR 2020 Challenge.
 ## Datasets
 The following datasets are used for evaluation in this challenge:
 
-## Codebase
-The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchmark [1], while the GNN function was taken and modified from https://github.com/hytseng0509/CrossDomainFewShot. [2]
+### Codebase
+The codebase is from the Challenge's Github https://github.com/IBM/cdfsl-benchmark [1], while the GNN function was modified from https://github.com/hytseng0509/CrossDomainFewShot. [2]
 
 ### Source domain: 
 
