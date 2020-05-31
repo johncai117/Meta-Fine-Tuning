@@ -17,7 +17,7 @@ Submission for the CVPR 2020 Challenge.
 
 #### https://arxiv.org/abs/2005.10544
 
-To cite, use the BibTex:
+To cite:
 ```
 @article{cai2020cross,
   title={Cross-Domain Few-Shot Learning with Meta Fine-Tuning},
