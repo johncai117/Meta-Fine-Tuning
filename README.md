@@ -17,6 +17,16 @@ Submission for the CVPR 2020 Challenge.
 
 #### https://arxiv.org/abs/2005.10544
 
+To cite, use the BibTex:
+```
+@article{cai2020cross,
+  title={Cross-Domain Few-Shot Learning with Meta Fine-Tuning},
+  author={Cai, John and Shen, Sheng Mei},
+  journal={arXiv preprint arXiv:2005.10544},
+  year={2020}
+}
+```
+
 
 ## Datasets
 The following datasets are used for evaluation in this challenge:
