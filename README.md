@@ -101,11 +101,11 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
 
 1. Download the pre-trained models from a link that you can find here: <https://www.dropbox.com/s/drzg0ptexfjrv7f/logs.zip?dl=0> 
 
-If this is for the challenge evaluation, the link has already been included with the submission.
+    If this is for the challenge evaluation, the link has already been included with the submission.
  
     Unzip the file and place it in the main directory of the project
  
-5. Run the main experiments in this paper for 5-shot, 20-shot and 50-shot
+2. Run the main experiments in this paper for 5-shot, 20-shot and 50-shot
 
     • *5-shot*
 
