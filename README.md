@@ -72,6 +72,7 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
 
 * **Average accuracy across all trials: 73.78\% 
 * This is a 6.51\% improvement over the baseline model in the challenge. 
+* This submission won 2nd place in the CVPR CDFSL challenge.
 
 
 ## Steps for Loading Data
