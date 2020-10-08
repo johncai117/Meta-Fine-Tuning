@@ -1,0 +1,20 @@
+### data files
+
+EuroSAT.zip
+2750/
+__MACOSX/
+miniImagenet3/
+miniImagenet3.zip
+ISIC2018_Task3_Training_GroundTruth.zip
+ISIC2018_Task3_Training_GroundTruth.csv
+ISIC2018_Task3_Training_Input.zip
+ISIC2018_Task3_Training_GroundTruth/
+ISIC2018_Task3_Training_Input/
+dataset/
+env/
+content/
+__pycache__/
+Data_Entry_2017.csv
+logs/
+Meta-Fine-Tuning/
+get-pip.py
