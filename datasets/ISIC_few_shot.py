@@ -102,8 +102,8 @@ class SetDataset:
         for i, (data, label) in enumerate(d):
             self.sub_meta[label].append(data)
 
-        for key, item in self.sub_meta.items():
-            print (len(self.sub_meta[key]))
+        #for key, item in self.sub_meta.items():
+            #print (len(self.sub_meta[key]))
 
         self.sub_dataloader = []
         sub_data_loader_params = dict(batch_size = batch_size,
@@ -135,8 +135,8 @@ class SetDataset:
         for i, (data, label) in enumerate(d):
             self.sub_meta[label].append(data)
 
-        for key, item in self.sub_meta.items():
-            print (len(self.sub_meta[key]))
+        #for key, item in self.sub_meta.items():
+            #print (len(self.sub_meta[key]))
 
         self.sub_dataloader = []
         sub_data_loader_params = dict(batch_size = batch_size,
@@ -167,8 +167,8 @@ class SetDataset2:
         for i, (data, label) in enumerate(d):
             self.sub_meta[label].append(data)
 
-        for key, item in self.sub_meta.items():
-            print (len(self.sub_meta[key]))
+        #for key, item in self.sub_meta.items():
+            #print (len(self.sub_meta[key]))
 
         seed = 10
         torch.manual_seed(seed)
@@ -387,7 +387,7 @@ class SetDataManager2(DataManager):
         data_loader_params = dict(batch_sampler = sampler, shuffle = False, num_workers = 2, pin_memory = True)
 
         dataset_list = [dataset] + [dataset2] ## for checking later
-        print(len(dataset_list))
+        #print(len(dataset_list))
         for i in range(num_aug):
           transform2 = TransformLoader(self.image_size).get_composed_transform(True)
           dataset2 = SetDataset2(self.batch_size, transform2, self.d)

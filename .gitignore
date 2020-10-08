@@ -1,6 +1,5 @@
 ### data files
 
-EuroSAT.zip
 2750/
 __MACOSX/
 miniImagenet3/
@@ -18,3 +17,6 @@ Data_Entry_2017.csv
 logs/
 Meta-Fine-Tuning/
 get-pip.py
+logs2.zip
+logs.zip
+oldlogs/

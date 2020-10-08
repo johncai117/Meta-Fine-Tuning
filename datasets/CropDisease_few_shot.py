@@ -62,8 +62,8 @@ class SetDataset:
             self.sub_meta[label].append(data)
     
 
-        for key, item in self.sub_meta.items():
-            print (len(self.sub_meta[key]))
+        f#or key, item in self.sub_meta.items():
+            #print (len(self.sub_meta[key]))
 
         self.sub_dataloader = [] 
         sub_data_loader_params = dict(batch_size = batch_size,
@@ -83,8 +83,8 @@ class SetDataset:
 class SetDataset2:
     def __init__(self, batch_size, sub_meta, transform):
 
-        for key, item in sub_meta.items():
-            print (len(sub_meta[key]))
+        #for key, item in sub_meta.items():
+            #print (len(sub_meta[key]))
         self.cl_list = range(38)
         seed = 10
         torch.manual_seed(seed)

@@ -587,8 +587,8 @@ if __name__=='__main__':
 
   # replace finetine() with your own method
   iter_num = 600
-  print(iter_num)
-  print(len(novel_loader))
+  #print(iter_num)
+  #print(len(novel_loader))
   
   if params.method != "all":
     for idx, (elem) in enumerate(novel_loader):
@@ -627,7 +627,6 @@ if __name__=='__main__':
       acc_all.append((correct_this/ count_this *100))
   else:
     for idx, (elem) in enumerate(novel_loader):
-      print(idx)
       leng = len(elem)
       ## uncomment below assertion to check randomness - the same image is selected despite using two different loaders
       ## as we set the seed to be fixed
@@ -656,7 +655,9 @@ if __name__=='__main__':
       
       top1_correct = np.sum(topk_ind[:,0] == y_query)
       correct_this, count_this = float(top1_correct), len(y_query)
-      print (correct_this/ count_this *100)
+      if idx % 10 == 0:
+          print(idx)
+          print(correct_this/ count_this *100)
       acc_all.append((correct_this/ count_this *100))
       
       
@@ -672,4 +673,5 @@ if __name__=='__main__':
   acc_all  = np.asarray(acc_all)
   acc_mean = np.mean(acc_all)
   acc_std  = np.std(acc_all)
+  print(params.test_dataset)
   print('%d Test Acc = %4.2f%% +- %4.2f%%' %(iter_num,  acc_mean, 1.96* acc_std/np.sqrt(iter_num)))

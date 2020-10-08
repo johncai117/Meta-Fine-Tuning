@@ -144,8 +144,8 @@ class SetDataset:
         for i, (data, label) in enumerate(d):
             self.sub_meta[label].append(data)
 
-        for key, item in self.sub_meta.items():
-            print (len(self.sub_meta[key]))
+        #for key, item in self.sub_meta.items():
+            #print (len(self.sub_meta[key]))
     
         self.sub_dataloader = [] 
         sub_data_loader_params = dict(batch_size = batch_size,
@@ -154,7 +154,7 @@ class SetDataset:
                                   pin_memory = False)        
        
         for cl in self.cl_list:
-            print (cl)
+            #print (cl)
             sub_dataset = SubDataset(self.sub_meta[cl], cl, transform = transform )
             self.sub_dataloader.append( torch.utils.data.DataLoader(sub_dataset, **sub_data_loader_params) )
 
@@ -177,8 +177,8 @@ class SetDataset2:
         for i, (data, label) in enumerate(dat):
             self.sub_meta[label].append(data)
 
-        for key, item in self.sub_meta.items():
-            print (len(self.sub_meta[key]))
+        #for key, item in self.sub_meta.items():
+            #print (len(self.sub_meta[key]))
 
         seed = 10
         torch.manual_seed(seed)
