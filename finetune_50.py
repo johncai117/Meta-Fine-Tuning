@@ -663,7 +663,6 @@ if __name__=='__main__':
   
   if params.method != "all":
     for idx, (elem) in enumerate(novel_loader):
-      print(idx)
       leng = len(elem)
       
       ## uncomment below assertion to check stuff
@@ -696,7 +695,6 @@ if __name__=='__main__':
       acc_all.append((correct_this/ count_this *100))
   else:
     for idx, (elem) in enumerate(novel_loader):
-      print(idx)
       leng = len(elem)
       ### assertion to check
       #assert(torch.all(torch.eq(elem[0][0] , elem[1][0])) )
@@ -723,7 +721,9 @@ if __name__=='__main__':
       
       top1_correct = np.sum(topk_ind[:,0] == y_query)
       correct_this, count_this = float(top1_correct), len(y_query)
-      print (correct_this/ count_this *100)
+      if idx % 20 == 0:
+          print(idx)
+          print (correct_this/ count_this *100)
       acc_all.append((correct_this/ count_this *100))
    
  
