@@ -189,6 +189,19 @@ The codebase is adapted from the Challenge's Github https://github.com/IBM/cdfsl
 
     Follow steps 2 and 3 in the steps for testing using pretrained models.
 
+  
+## Steps for Ablation Studies
+
+1. Simple Fine-Tuning
+
+For simple fine-tuning, simply change the arguments for --save-iter in steps 2 and 3 from "600" to "400".
+
+2. No Data Augmentation
+
+To remove data-augmentation, simply change the arguments for --gen-examples in steps 2 and 3 from "17" to "0".
+
+## References
+
 [1] Yunhui  Guo,  Noel  CF  Codella,  Leonid  Karlinsky,  John  RSmith,  Tajana  Rosing,  and  Rogerio  Feris.A  new  bench-mark for evaluation of cross-domain few-shot learning.arXivpreprint arXiv:1912.07200, 2019
 
 [2] Tseng, H. Y., Lee, H. Y., Huang, J. B., & Yang, M. H. Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation. arXiv preprint arXiv:2001.08735, 2020.
