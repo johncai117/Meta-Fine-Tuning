@@ -167,7 +167,7 @@ class GnnNet(MetaTemplate):
 
               output = feat_network(z_batch)
               scores  = classifier(output)
-              loss = loss_fn(output, y_batch)
+              loss = loss_fn(scores, y_batch)
               #grad = torch.autograd.grad(set_loss, fast_parameters, create_graph=True)
 
               #####################################
