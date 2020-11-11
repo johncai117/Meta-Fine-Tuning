@@ -180,7 +180,8 @@ class SetDataset2:
         #for key, item in self.sub_meta.items():
             #print (len(self.sub_meta[key]))
 
-        seed = 10
+        seed = 11
+
         torch.manual_seed(seed)
         torch.cuda.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)  # if you are using multi-GPU.
@@ -194,12 +195,11 @@ class SetDataset2:
         
         self.sub_dataloader = [] 
         sub_data_loader_params = dict(batch_size = batch_size,
-                                  shuffle = False,
+                                  shuffle = True,
                                   num_workers = 0, #use main thread only or may receive multiple batches
                                   pin_memory = False)        
         
         for cl in self.cl_list:
-            random.shuffle(self.sub_meta[cl]) 
             sub_dataset = SubDataset2(self.sub_meta[cl], cl, transform = transloader, num_aug = self.num_aug)       
             self.sub_dataloader.append( torch.utils.data.DataLoader(sub_dataset, **sub_data_loader_params) )
 
@@ -247,13 +247,14 @@ class SubDataset2:
         img_as_img = Image.open(path).resize((256, 256)).convert('RGB')
         img_as_img.load()
         img_aug_list = []
-        for j in range(self.num_aug):
+        for j in range(self.num_aug + 2): ## need the plus 2
           img_transform_func = self.transform_list[j]
           img_func = img_transform_func()
           img_aug_list.append(img_func(img_as_img))
         target = self.target_transform(self.cl)
-        target_list = [target] * self.num_aug
+        target_list = [target] * (self.num_aug + 2)
         out = list(zip(img_aug_list, target_list))
+        #print(hello)
         return out
 
     def __len__(self):
@@ -322,7 +323,7 @@ class TransformLoader:
 
     def get_composed_transform(self, aug = False):
         if aug:
-            transform_list = ['RandomSizedCrop', 'ImageJitter', 'RandomHorizontalFlip', 'ToTensor', 'Normalize']
+            transform_list = ['RandomSizedCrop', 'ImageJitter', 'ToTensor', 'Normalize']
         else:
             transform_list = ['Scale','CenterCrop', 'ToTensor', 'Normalize']
 
@@ -405,24 +406,16 @@ class SetDataManager2(DataManager):
         self.trans_loader = TransformLoader(image_size)
 
     def get_data_loader(self, num_aug = 4): #parameters that would change on train/val set
-        #transform = self.trans_loader.get_composed_transform(False)
         dataset = SetDataset2(self.batch_size, self.dat, self.trans_loader, num_aug)
-        #dataset = SetDataset2(self.batch_size, transform, self.dat)
-        #dataset2 = SetDataset2(self.batch_size, transform, self.dat)
+
         sampler = EpisodicBatchSampler2(len(dataset), self.n_way, self.n_eposide )  
         perms = sampler.generate_perm()
 
-        data_loader_params = dict(batch_sampler = sampler, shuffle = False, num_workers = 0, pin_memory = True)       
-        
-        #dataset_list = [dataset] + [dataset2] ## for checking later
-        #print(len(dataset_list))
-        #or i in range(num_aug):
-          #transform2 = TransformLoader(self.image_size).get_composed_transform(True)
-          #dataset2 = SetDataset2(self.batch_size, transform2, self.dat)
-          #dataset_list.append(dataset2)
-        #dataset_chain = ConcatDataset(dataset_list)
+        data_loader_params = dict(batch_sampler = perms, num_workers = 0, pin_memory = True)       
+    
         
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)
+   
        
         return data_loader
 
