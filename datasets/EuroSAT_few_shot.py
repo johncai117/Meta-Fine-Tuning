@@ -98,12 +98,11 @@ class SetDataset2:
         
         self.sub_dataloader = [] 
         sub_data_loader_params = dict(batch_size = batch_size,
-                                  shuffle = False,
+                                  shuffle = True,
                                   num_workers = 0, #use main thread only or may receive multiple batches
                                   pin_memory = False)        
         
         for cl in self.cl_list:
-            random.shuffle(sub_meta[cl]) ## add back the seeded randomness ## same across datasets
             sub_dataset = SubDataset2(sub_meta[cl], cl, transform = transform )
             self.sub_dataloader.append( torch.utils.data.DataLoader(sub_dataset, **sub_data_loader_params) )
 
