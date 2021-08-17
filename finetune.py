@@ -281,8 +281,7 @@ def finetune(liz_x,y, model, state_in, save_it, linear = False, flatten = True, 
               avgpool = nn.AvgPool2d(7)
               flat = backbone.Flatten()
               output = flat(avgpool(output))
-            scores  = classifier(output)
-            loss = loss_fn(scores, y_batch)
+            loss = loss_fn(output, y_batch)
 
             #####################################
             loss.backward()
