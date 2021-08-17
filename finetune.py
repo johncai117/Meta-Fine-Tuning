@@ -148,6 +148,7 @@ def finetune_linear(liz_x,y, state_in, save_it, linear = False, flatten = True, 
             #####################################
 
             output = pretrained_model(z_batch)
+            output = classifier(output)
             loss = loss_fn(output, y_batch)
 
             #####################################
