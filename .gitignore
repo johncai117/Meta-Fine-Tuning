@@ -20,3 +20,6 @@ get-pip.py
 logs2.zip
 logs.zip
 oldlogs/
+*.zip
+*.png
+newimages/

@@ -654,7 +654,7 @@ if __name__=='__main__':
       
       top1_correct = np.sum(topk_ind[:,0] == y_query)
       correct_this, count_this = float(top1_correct), len(y_query)
-      if idx % 10 == 0:
+      if idx % 1 == 0:
           print(idx)
           print(correct_this/ count_this *100)
       acc_all.append((correct_this/ count_this *100))
