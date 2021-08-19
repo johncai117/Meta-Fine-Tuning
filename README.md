@@ -27,6 +27,10 @@ To cite:
 }
 ```
 
+## Updated Model with Better Performance
+
+For updated model with better performance, check out https://github.com/johncai117/DAMSL. This clarifies the work done in this paper and identifies a key component of the out-performance as the score-based meta learning method. 
+
 
 ## Datasets
 The following datasets are used for evaluation in this challenge:
