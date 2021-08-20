@@ -87,6 +87,10 @@ def finetune_linear(liz_x,y, state_in, save_it, linear = False, flatten = True, 
     x_b_i = x_var[:, n_support:,:,:,:].contiguous().view( n_way* n_query,   *x.size()[2:]) 
     x_a_i = x_var[:,:n_support,:,:,:].contiguous().view( n_way* n_support, *x.size()[2:]) # (25, 3, 224, 224)
     x_inn = x_var.view(n_way* (n_support + n_query), *x.size()[2:])
+
+    x_all = torch.cat((x_a_i, x_b_i), dim = 0)
+
+    temp_shape = x_a_i.shape[0]
     
     ### to load all the changed examples
     x_a_i = torch.cat((x_a_i, x_a_i), dim = 0) ##oversample the first one
@@ -123,11 +127,10 @@ def finetune_linear(liz_x,y, state_in, save_it, linear = False, flatten = True, 
         delta_opt = torch.optim.Adam(filter(lambda p: p.requires_grad, pretrained_model.parameters()), lr = 0.01)
 
 
-
     pretrained_model.cuda()
     classifier.cuda()
     ###############################################################################################
-    total_epoch = params.fine_tune_epoch
+    
 
     if freeze_backbone is False:
         pretrained_model.train()
@@ -163,10 +166,12 @@ def finetune_linear(liz_x,y, state_in, save_it, linear = False, flatten = True, 
             if freeze_backbone is False:
                 delta_opt.step()
 
-    pretrained_model.eval()
-    classifier.eval()
 
-    output = pretrained_model(x_b_i.cuda())
+    output = pretrained_model(x_all.cuda())
+
+    output = output[temp_shape:]
+
+    
     score = classifier(output).detach()
     score = torch.nn.functional.softmax(score, dim = 1).detach()
     return score
